@@ -1,0 +1,61 @@
+def fechaActual = new Date()
+def hoy = fechaActual.getDay()
+pipeline{
+    agent any
+    stages{
+        stage("Lunes"){
+            steps{
+                script{
+                    if(hoy == 1){
+                        println "Lunes: No se hace nada"
+                    }
+                }
+                
+                    
+            }       
+        }
+        stage("Martes"){
+            steps{
+                script{
+                    if(hoy == 2){
+                        println "Martes: La fecha actual es "  + fechaActual
+                    }
+                }
+                
+            }       
+        }
+        stage("Miércoles"){
+            steps{
+                script{
+                    if(hoy == 3){
+                     println "Miércoles: No se hace nada"
+                    }
+                }
+                
+            }       
+        }
+        
+        stage("Jueves"){
+            steps{
+                script{
+                    if(hoy == 4){
+                        println "Jueves: No se hace nada"
+                }
+                }
+                
+            }       
+        }
+        
+        stage("Viernes"){
+            steps{
+                script{
+                    if(hoy == 5){
+                        println "Viernes; usuario Juan Enrique Guillem Crespo"
+                    }
+                }
+                
+            }       
+        }
+        
+    }
+}
